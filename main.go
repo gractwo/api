@@ -3,6 +3,9 @@ package main
 import (
 	"os"
 
+	"gractwo-api/database"
+	"gractwo-api/router"
+
 	"github.com/joho/godotenv"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
@@ -17,11 +20,15 @@ func main() {
 	if err != nil {
 		panic("failed to connect database")
 	}
-	db.AutoMigrate(&Quote{},
-		&QuoteLine{})
+	db.AutoMigrate(
+		&database.Quote{},
+		&database.QuoteLine{},
+		&database.Image{})
 
 	//Init api
-	router := InitRouter()
+	router := router.InitRouter()
 	err = router.Run(":2021")
-
+	if err != nil {
+		panic("failed to connect database")
+	}
 }
