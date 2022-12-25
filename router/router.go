@@ -1,6 +1,10 @@
 package router
 
-import "github.com/gin-gonic/gin"
+import (
+	v1 "gractwo-api/router/v1"
+
+	"github.com/gin-gonic/gin"
+)
 
 //docs "github.com/go-project-name/docs"
 
@@ -13,8 +17,9 @@ func InitRouter() *gin.Engine {
 	apiv1 := r.Group("/api/v1")
 	apiv1.Use()
 	{
-		r.GET("./", )
+		apiv1.GET("/admincards", v1.GetAdminCards)
+		apiv1.GET("/images", v1.GetImages)
+		apiv1.GET("/splash", v1.GetSplash)
 	}
-
 	return r
 }

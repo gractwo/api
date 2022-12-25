@@ -3,27 +3,37 @@ package database
 import (
 	"time"
 
-	"gorm.io/gorm"
+	"github.com/lib/pq"
 )
 
 type Quote struct {
-	gorm.Model
 	ID   string `gorm:"primaryKey"`
-	date time.Time
-	tags []string
+	Date *time.Time
+	Tags pq.StringArray `gorm:"type:varchar(64)[]"`
 }
 
 type QuoteLine struct {
-	gorm.Model
-	author  string
-	content string
+	Author  string
+	Content string
 }
 type Image struct {
-	gorm.Model
-	id          string
-	title       string
-	description string
-	date        time.Time
-	place       string
-	link        string
+	Id          string
+	Title       string
+	Description string
+	Date        *time.Time
+	Place       string
+	Link        string
+}
+
+type Admincard struct {
+	Id           string
+	Name         string
+	Desc         string
+	Img          string
+	DevBadge     bool
+	AssignedUser string
+}
+type Splash struct {
+	Id     string
+	Splash string
 }
