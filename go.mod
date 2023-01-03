@@ -3,11 +3,10 @@ module gractwo-api
 go 1.19
 
 require (
+	github.com/gin-contrib/cors v1.4.0
 	github.com/gin-gonic/gin v1.8.2
 	github.com/joho/godotenv v1.4.0
 	github.com/lib/pq v1.10.2
-	github.com/swaggo/files v1.0.0
-	github.com/swaggo/gin-swagger v1.5.3
 	github.com/swaggo/swag v1.8.9
 	gorm.io/driver/postgres v1.4.5
 	gorm.io/gorm v1.24.2

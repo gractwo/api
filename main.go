@@ -10,10 +10,10 @@ import (
 func main() {
 	//line valid only on dev. ignore
 	godotenv.Load("local.env")
-	
+
 	//init database
 	database.CreateConnection()
-	
+
 	//Init api
 	router := router.InitRouter()
 	err := router.Run(":2021")
