@@ -18,7 +18,7 @@ func InitRouter() *gin.Engine {
 	apiv1 := r.Group("/api/v1")
 	apiv1.Use()
 	{
-		apiv1.GET("/person-of-note", v1.GetAdminCards)
+		apiv1.GET("/persons-of-note", v1.GetAdminCards)
 		apiv1.GET("/index-images", v1.GetImages)
 		apiv1.GET("/splash", v1.GetSplash)
 	}
