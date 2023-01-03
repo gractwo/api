@@ -31,6 +31,7 @@ type Admincard struct {
 	Desc         string
 	Img          string
 	DevBadge     bool
+	Admincard    bool
 	AssignedUser string
 }
 type Splash struct {
