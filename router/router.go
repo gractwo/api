@@ -21,6 +21,7 @@ func InitRouter() *gin.Engine {
 		apiv1.GET("/persons-of-note", v1.GetAdminCards)
 		apiv1.GET("/index-images", v1.GetImages)
 		apiv1.GET("/splash", v1.GetSplash)
+		apiv1.GET("/badges/:user", v1.GetUserBadges)
 	}
 	return r
 }

@@ -38,3 +38,23 @@ type Splash struct {
 	Id     string
 	Splash string
 }
+
+type User struct {
+	Id          string
+	UserId      string
+	AccentColor string
+}
+
+type Badge struct {
+	Id   string
+	Name string
+	Desc string
+	Expl string
+	Img  string
+}
+
+type GivenBadges struct {
+	UserId  string
+	BadgeId string
+	Date    *time.Time
+}

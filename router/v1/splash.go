@@ -13,5 +13,5 @@ func GetSplash(c *gin.Context) {
 	if err != nil {
 		c.JSON(404, "Not found")
 	}
-	c.JSON(200, SplashList[rand.Intn(len(SplashList)-1-0+1)+0])
+	c.JSON(200, SplashList[rand.Intn(len(SplashList))])
 }

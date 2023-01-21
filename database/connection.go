@@ -21,5 +21,9 @@ func CreateConnection() {
 		&QuoteLine{},
 		&Image{},
 		&Admincard{},
-		&Splash{})
+		&Splash{},
+		&User{},
+		&Badge{},
+		&GivenBadges{},
+	)
 }
